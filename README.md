@@ -23,4 +23,4 @@ Preprocess process the data with `bash tools/process.sh`
 Run `python main.py` to run DSI.
 
 ## Evaluating
-Run `python eval.py` --load_path DIRNAME to evaluate your model.
+Run `python eval.py --load_path DIRNAME` to evaluate your model.
