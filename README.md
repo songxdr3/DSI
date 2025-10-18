@@ -19,7 +19,7 @@ Download questions/answers for VQA v2, VQA-CP v1 and VQA-CP v2 by executing bash
 Preprocess process the data with bash tools/process.sh
 
 ## Training
-Run python main.py to run GenB.
+Run python main.py to run DSI.
 
 ## Evaluating
 Run python eval.py --load_path DIRNAME to evaluate your model.
