@@ -10,6 +10,7 @@ Visual Question Answering (VQA) evaluates the visual-textual reasoning capabilit
 ## Prerequisites
 Please make sure you are using a NVIDIA GPU with Python==3.8.8 and about 100 GB of disk space.
 
+Install all requirements with `pip install -r requirements.txt`
 
 ## Data Setup
 Download UpDn features from [google drive](https://drive.google.com/drive/folders/111ipuYC0BeprYZhHXLzkRGeYAHcTT0WR), which is the link from this repo, into /data/detection_features folder
