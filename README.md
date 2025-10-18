@@ -8,7 +8,7 @@ Visual Question Answering (VQA) evaluates the visual-textual reasoning capabilit
 
 
 ## Prerequisites
-Please make sure you are using a NVIDIA GPU with Python==3.7.1 and about 100 GB of disk space.
+Please make sure you are using a NVIDIA GPU with Python==3.8.8 and about 100 GB of disk space.
 
 
 ## Data Setup
