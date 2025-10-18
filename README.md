@@ -13,14 +13,14 @@ Please make sure you are using a NVIDIA GPU with Python==3.8.8 and about 100 GB 
 Install all requirements with `pip install -r requirements.txt`
 
 ## Data Setup
-Download UpDn features from [google drive](https://drive.google.com/drive/folders/111ipuYC0BeprYZhHXLzkRGeYAHcTT0WR), which is the link from this repo, into /data/detection_features folder
+Download UpDn features from [google drive](https://drive.google.com/drive/folders/111ipuYC0BeprYZhHXLzkRGeYAHcTT0WR), which is the link from this repo, into `/data/detection_features folder`
 
-Download questions/answers for VQA v2, VQA-CP v1 and VQA-CP v2 by executing bash tools/download.sh
+Download questions/answers for VQA v2, VQA-CP v1 and VQA-CP v2 by executing `bash tools/download.sh`
 
-Preprocess process the data with bash tools/process.sh
+Preprocess process the data with `bash tools/process.sh`
 
 ## Training
-Run python main.py to run DSI.
+Run `python main.py` to run DSI.
 
 ## Evaluating
-Run python eval.py --load_path DIRNAME to evaluate your model.
+Run `python eval.py` --load_path DIRNAME to evaluate your model.
