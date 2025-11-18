@@ -16,19 +16,10 @@ def dynamic_shuffle(q, shuffle_ratio):
     batch_size = q.size(0)
     seq_len = q.size(1)
     for i in range(batch_size):
-        # 计算当前样本需要 shuffle 的元素数量
         num_shuffle = int(seq_len * shuffle_ratio[i])
-
-        # 生成需要 shuffle 的随机索引
         indices = torch.randperm(seq_len)[:num_shuffle]
-
-        # 生成不需要 shuffle 的剩余索引
         remaining_indices = torch.tensor([j for j in range(seq_len) if j not in indices])
-
-        # 对当前样本的指定索引进行 shuffle
         shuffled_q[i, indices] = q[i, indices[torch.randperm(num_shuffle)]]
-
-        # 保持剩余索引不变
         shuffled_q[i, remaining_indices] = q[i, remaining_indices]
     return shuffled_q
 
