@@ -112,14 +112,6 @@ def _load_dataset(dataroot, name, img_id2val, dataset):
         question_path = os.path.join(dataroot, 'vqa', 'v2_OpenEnded_mscoco_%s2014_questions.json' % name)
         with open(question_path) as f:
             questions = json.load(f)["questions"]
-    elif dataset == 'gqaood':
-        answer_path = os.path.join('/opt/data/private/sxd/data/gqa/gqaood-cache/', '%s_target.pkl' % name)
-        if name == "train":
-            question_path = os.path.join('/opt/data/private/sxd/data/gqa/train.json')
-        elif name =='val':
-            question_path = os.path.join('/opt/data/private/sxd/data/gqa/val_all.json')
-        with open(question_path) as f:
-            questions = json.load(f)
 
 
     with open(answer_path, 'rb') as f:
@@ -164,9 +156,7 @@ class VQAFeatureDataset(Dataset):
         elif dataset == 'v2':
             ans2label_path = os.path.join(dataroot, 'cache', 'trainval_ans2label.pkl')
             label2ans_path = os.path.join(dataroot, 'cache', 'trainval_label2ans.pkl')
-        elif dataset == 'gqaood':
-            ans2label_path = os.path.join('/opt/data/private/sxd/data/gqa/gqaood-cache/', 'trainval_ans2label.pkl')
-            label2ans_path = os.path.join('/opt/data/private/sxd/data/gqa/gqaood-cache/', 'trainval_label2ans.pkl')
+            
         self.ans2label = cPickle.load(open(ans2label_path, 'rb'))
         self.label2ans = cPickle.load(open(label2ans_path, 'rb'))
         self.num_ans_candidates = len(self.ans2label)
